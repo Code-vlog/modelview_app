@@ -15,7 +15,7 @@ class MainActivityViewModel :ViewModel() {
         return counter
     }
 
-    public fun SetCount(){
+    public fun incerement(){
         counter.postValue(counter.value!!+1)
     }
 }

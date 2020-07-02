@@ -14,15 +14,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this,R.layout.activity_main)
         viewModel = ViewModelProvider(this).get(MainActivityViewModel::class.java)
-//        viewModel.getCount().observe(this, Observer {it_->
-//            text.text = it_.toString();
-//        })
 
         binding.lifecycleOwner = this
         binding.viewmodel = viewModel
         add_btn.setOnClickListener {
-            //view model
-            viewModel.SetCount()
+            viewModel.incerement()
         }
 
     }
