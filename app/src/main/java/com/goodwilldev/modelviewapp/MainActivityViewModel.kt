@@ -4,18 +4,17 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class MainActivityViewModel :ViewModel() {
-    private var counter:MutableLiveData<Int> = MutableLiveData()
+class MainActivityViewModel:ViewModel() {
+    private var counter_:MutableLiveData<Int> = MutableLiveData()
 
     init {
-        counter.postValue(0)
+        counter_.postValue(0)
     }
 
-    public fun getCount(): LiveData<Int> {
-        return counter
+    public fun getCount():LiveData<Int>{
+        return counter_
     }
-
-    public fun incerement(){
-        counter.postValue(counter.value!!+1)
+    public fun increment(){
+        counter_.postValue(counter_.value!!+1)
     }
 }
